@@ -1,0 +1,24 @@
+@import "normalize.css";
+@import "@blueprintjs/core/lib/css/blueprint.css";
+@import "@blueprintjs/icons/lib/css/blueprint-icons.css";
+
+@import "@blueprintjs/core/lib/scss/variables";
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#app.bp4-dark {
+    background-color: $pt-dark-app-background-color;
+}
