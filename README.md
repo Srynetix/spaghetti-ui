@@ -1,5 +1,7 @@
 # spaghetti-ui :spaghetti:
 
+[![Coverage Status](https://coveralls.io/repos/github/Srynetix/spaghetti-ui/badge.svg?branch=main)](https://coveralls.io/github/Srynetix/spaghetti-ui?branch=main)
+
 Web app around the [spaghetti](https://github.com/Srynetix/spaghetti) Python module dependencies tracer.
 
 ## Tech stack
