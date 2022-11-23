@@ -1,0 +1,28 @@
+@import "@blueprintjs/core/lib/scss/variables";
+
+.graph {
+    flex-grow: 1;
+    display: flex;
+}
+
+.error {
+    flex-grow: 1;
+    align-self: center;
+    text-align: center;
+
+    color: lightcoral;
+}
+
+.loading {
+    flex-grow: 1;
+    align-self: center;
+    text-align: center;
+}
+
+.overload {
+    flex-grow: 1;
+    align-self: center;
+    text-align: center;
+
+    color: orange;
+}
