@@ -15,15 +15,12 @@ Web app around the [spaghetti](https://github.com/Srynetix/spaghetti) Python mod
 
 ## How to use
 
-You only need [Python 3.9+](https://www.python.org/) and [Poetry](https://python-poetry.org/).
+You only need [Python 3.9+](https://www.python.org/).
 
 Then, do:
 
 ```bash
-poetry install
-poetry run spaghetti-ui <your_code_path>
+pip install git+https://github.com/Srynetix/spaghetti-ui#v0.1.1
+
+spaghetti-ui <your_code_path>
 ```
-
-## Next steps
-
-I'm currently looking for a solution where you don't need Poetry, so check the project later!
