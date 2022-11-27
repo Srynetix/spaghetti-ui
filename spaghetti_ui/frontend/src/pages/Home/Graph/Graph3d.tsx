@@ -72,10 +72,7 @@ const Graph3d = ({
       const nodeProps = node as Record<string, string>;
       const id = node.id as string;
 
-      if (
-        colorizeFilteredModules &&
-        isNodeFiltered(filteredPatterns, id)
-      ) {
+      if (colorizeFilteredModules && isNodeFiltered(filteredPatterns, id)) {
         nodeProps.color = "#00ff00";
       }
 
@@ -85,8 +82,8 @@ const Graph3d = ({
       sprite.textHeight = highlightNodes.has(node) ? 6 : 4;
       return sprite;
     },
-    [colorizeFilteredModules, hoverNode]
-  )
+    [colorizeFilteredModules, hoverNode, filteredPatterns, highlightNodes]
+  );
 
   return (
     <ForceGraph3D

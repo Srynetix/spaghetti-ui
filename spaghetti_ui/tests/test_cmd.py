@@ -18,5 +18,4 @@ class TestCmd:
         runner = CliRunner()
         result = runner.invoke(run, ["/tmp/dummy"])
         assert result.exit_code == 0
-        assert result.output == ""
         run_patch.assert_called()
