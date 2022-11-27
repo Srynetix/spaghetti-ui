@@ -30,9 +30,9 @@ const renderError = (error: FetchBaseQueryError | SerializedError) => {
 
 const renderErrorMessage = (error: FetchBaseQueryError) => {
   if (error.status == "FETCH_ERROR") {
-    return `Make sure the server at URL ${SPAGHETTI_API_URL} is responding.`
+    return `Make sure the server at URL ${SPAGHETTI_API_URL} is responding.`;
   }
-}
+};
 
 const renderLoading = () => {
   return (
@@ -108,8 +108,12 @@ const Graph = () => {
   const maxNodesToDisplay = useAppSelector(
     (state) => state.ui.maxNodesToDisplay
   );
-  const filteredPatterns = useAppSelector((state) => state.reportParameters.filteredPatterns);
-  const colorizeFilteredModules = useAppSelector((state) => state.ui.colorizeFilteredModules);
+  const filteredPatterns = useAppSelector(
+    (state) => state.reportParameters.filteredPatterns
+  );
+  const colorizeFilteredModules = useAppSelector(
+    (state) => state.ui.colorizeFilteredModules
+  );
   const renderMode = useAppSelector((state) => state.ui.renderMode);
 
   // Update render size on window resize
@@ -149,7 +153,13 @@ const Graph = () => {
                 filteredPatterns,
                 colorizeFilteredModules
               )
-            : renderGraph2d(graph, width, height, filteredPatterns, colorizeFilteredModules)
+            : renderGraph2d(
+                graph,
+                width,
+                height,
+                filteredPatterns,
+                colorizeFilteredModules
+              )
           : renderOverload(graph.getNodeCount(), maxNodesToDisplay)
         : null}
     </div>

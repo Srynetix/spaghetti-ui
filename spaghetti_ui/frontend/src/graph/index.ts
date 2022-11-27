@@ -34,7 +34,7 @@ export class GraphWrapper {
   }
 
   getNodeCount(): number {
-    return this.graph.nodes.length
+    return this.graph.nodes.length;
   }
 
   _buildGraph(): GraphData {
@@ -49,7 +49,7 @@ export class GraphWrapper {
       if (!seenNodes.has(key)) {
         seenNodes.add(key);
         data.nodes.push({
-          id: key
+          id: key,
         });
       }
     };
@@ -57,16 +57,16 @@ export class GraphWrapper {
     const addLink = (source: string, target: string) => {
       data.links.push({
         source,
-        target
+        target,
       });
     };
 
     for (const key of Object.keys(this.dependencies)) {
-      tryAddNode(key)
+      tryAddNode(key);
 
       this.dependencies[key].forEach((l) => {
-        tryAddNode(l)
-        addLink(key, l)
+        tryAddNode(l);
+        addLink(key, l);
       });
     }
 

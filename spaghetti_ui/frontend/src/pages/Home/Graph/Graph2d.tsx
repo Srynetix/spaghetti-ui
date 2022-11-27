@@ -19,7 +19,13 @@ const isNodeFiltered = (filteredPatterns: string[], id: string): boolean => {
   }
 };
 
-const Graph2d = ({ graph, width, height, filteredPatterns, colorizeFilteredModules }: Graph2dProps) => {
+const Graph2d = ({
+  graph,
+  width,
+  height,
+  filteredPatterns,
+  colorizeFilteredModules,
+}: Graph2dProps) => {
   const NODE_R = 4;
 
   const [highlightNodes, setHighlightNodes] = useState(new Set());
@@ -77,12 +83,15 @@ const Graph2d = ({ graph, width, height, filteredPatterns, colorizeFilteredModul
       ctx.font = `${fontSize}px Sans-Serif`;
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
-      ctx.fillStyle = colorizeFilteredModules && isNodeFiltered(filteredPatterns, id) ? "#00ff00" : "white";
+      ctx.fillStyle =
+        colorizeFilteredModules && isNodeFiltered(filteredPatterns, id)
+          ? "#00ff00"
+          : "white";
       ctx.shadowColor = "black";
       ctx.shadowBlur = 4;
       ctx.fillText(label, x, y);
     },
-    [colorizeFilteredModules, hoverNode]
+    [colorizeFilteredModules, hoverNode, filteredPatterns]
   );
 
   return (
